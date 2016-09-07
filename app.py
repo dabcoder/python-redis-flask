@@ -33,7 +33,7 @@ def setname():
 
 	#Get temperatures
 	w = owm.weather_at_place(name).get_weather()
-	temp = w.get_temperature(unit='celsius')['db_temp']
+	temp = w.get_temperature(unit='celsius')['temp']
 
 	#Set values in DB
 	db.set('name', name)
